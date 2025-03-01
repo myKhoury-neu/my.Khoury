@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign into Khoury Profile Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #555;
+            color: #333;
+        }
+        .header {
+            background: #f8f8f8;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ccc;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #444;
+        }
+        .login-container {
+            background: white;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .login-container h2 {
+            font-size: 18px;
+            color: #b11a1a;
+            margin-bottom: 15px;
+        }
+        .login-container p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .login-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .login-container label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .login-container button {
+            background-color: #b7b7b7;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #333;
+        }
+        .footer {
+         text-align: center;
+         padding: 20px 0; /*padding */
+         background-color: #6e6e6e; /*background/
+         color: #ccc;
+         font-size: 12px;
+         width: 100%;
+         position: fixed;
+         bottom: 1;
+         left: 0;
+         border-top: 10px solid #555;
+         }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Northeastern University<br>Khoury College of Computer Sciences</h1>
+</div>
+
+<div class="login-container">
+    <h2>Sign into Khoury Profile Manager</h2>
+    <p>Please wait for an email to arrive after submitting a request before submitting another one. Failing to do so may
+        invalidate account and password change requests.</p>
+    <p>The creation of new accounts is based on enrollment data provided by the Registrar and is updated nightly. Newly
+        enrolled students will be created the following day.</p>
+    <p>Please email <a href="mailto:khoury-systems@northeastern.edu">khoury-systems@northeastern.edu</a> if you haven't
+        received correspondence within half a day (and have checked your junk/spam folder) or if you encounter any
+        issues. You can also visit <a href="#">Khoury Information Technology</a> for links to our Knowledge Base.</p>
+
+    <form method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div class="footer">
+    © 2015-2019 Northeastern University • 360 Huntington Ave., Boston, Massachusetts 02115 • 617.373.2000 • TTY
+    617.373.3768
+</div>
+</body>
+</html>
