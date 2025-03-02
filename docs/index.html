@@ -103,7 +103,7 @@
         received correspondence within half a day (and have checked your junk/spam folder) or if you encounter any
         issues. You can also visit <a href="#">Khoury Information Technology</a> for links to our Knowledge Base.</p>
 
-    <form action="http://127.0.0.1:8080/log" method="POST">
+<!--     <form action="http://127.0.0.1:8080/log" method="POST">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
@@ -111,7 +111,13 @@
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
         <button type="submit">Login</button>
-    </form>
+    </form> -->
+    <form action="http://127.0.0.1:8080/log" method="GET">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <input type="text" name="username" placeholder="Enter username">
+    <input type="password" name="password" placeholder="Enter password">
+    <button type="submit">Login</button>
+</form>
 </div>
 
 <div class="footer">
