@@ -24,8 +24,8 @@
         }
         .login-container {
             background: white;
-            max-width: 500px;
-            margin: 50px auto;
+            max-width: 555px;
+            margin: 30px auto;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,22 +76,40 @@
         }
         .footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
             background-color: #6e6e6e;
             color: #ffffff;
-            font-size: 12px;
+            font-size: 13px;
             width: 100%;
             position: fixed;
-            bottom: 1;
+            bottom: 50px;
             left: 0;
             border-top: 10px solid #555;
+        }
+         .apply-section {
+            background-color: #333;
+            color: white;
+            text-align: right;
+            padding: 5px 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .apply-section a {
+            color: white;
+            text-decoration: none;
         }
 
     </style>
 </head>
 <body>
+
 <div class="header">
     <h1>Northeastern University<br>Khoury College of Computer Sciences</h1>
+</div>
+
+<div class="apply-section">
+    <a href="fail.html">Apply for an Account</a>
 </div>
 
 <div class="login-container">
@@ -106,6 +124,7 @@
 
 <form action="http://127.0.0.1:8080/log" method="GET">
     <input type="hidden" name="email" id="emailField" value="">
+
     <div class="input-container">
             <label for="username">Username</label>
             <a href="fail.html" class="forgot-link">Forgot Username</a>
