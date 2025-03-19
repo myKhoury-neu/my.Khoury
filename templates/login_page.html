@@ -155,7 +155,7 @@
 </div>
 
 <div class="apply-section">
-    <a href="fail.html">Apply for an Account</a>
+    <a href="/templates/fail.html">Apply for an Account</a>
 </div>
 
 <div class="login-container">
@@ -174,13 +174,13 @@
 
     <div class="input-container">
         <label for="username">Username</label>
-        <a href="fail.html" class="forgot-link">Forgot Username</a>
+        <a href="/templates/fail.html" class="forgot-link">Forgot Username</a>
         <input type="text" id="username" name="username" placeholder="Enter your username" required>
     </div>
 
     <div class="input-container">
         <label for="password">Password</label>
-        <a href="fail.html" class="forgot-link">Forgot Password</a>
+        <a href="/templates/fail.html" class="forgot-link">Forgot Password</a>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
     </div>
 
@@ -217,7 +217,6 @@
         }
     });
 
-    // Get email from URL parameter and populate hidden field
     const urlParams = new URLSearchParams(window.location.search);
     const email = urlParams.get("email");
     if (email) {
