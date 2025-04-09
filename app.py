@@ -19,7 +19,6 @@ def log_email():
             file.write(f"Email clicked: {email}"
                        f" - Username Entered: {'Yes' if username else 'No'} "
                        f"- Password Entered: {'Yes' if password else 'No'}\n")
-        # print(f"Email: {email}, Username: {username}, Password: {password}")
 
     return redirect(url_for('server_down'))
 
