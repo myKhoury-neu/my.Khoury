@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -6,15 +7,16 @@ app = Flask(__name__)
 def login_page():
     return render_template('login_page.html')
 
-@app.route('/log', methods=['GET', 'POST'])
+
+@app.route('/log', methods=['POST'])
 def log_email():
-    email = request.args.get("email")
+    email = request.form.get("email")
     username = request.form.get("username")
     password = request.form.get("password")
 
     if email or (username and password):
         with open("email_log.txt", "a") as file:
-            file.write(f"Email clicked: {email}"
+            file.write(f"[{datetime.now()}] Email clicked: {email or 'N/A'}"
                        f" - Username Entered: {'Yes' if username else 'No'} "
                        f"- Password Entered: {'Yes' if password else 'No'}\n")
 
