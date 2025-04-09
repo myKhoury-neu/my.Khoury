@@ -16,9 +16,11 @@ def log_email():
 
     if email or (username and password):
         with open("email_log.txt", "a") as file:
-            file.write(f"Email clicked: {email or 'N/A'}"
-                       f" - Username Entered: {'Yes' if username else 'No'} "
-                       f"- Password Entered: {'Yes' if password else 'No'}\n")
+            # file.write(f"Email clicked: {email or 'N/A'}"
+            #            f" - Username Entered: {'Yes' if username else 'No'} "
+            #            f"- Password Entered: {'Yes' if password else 'No'}\n")
+            file.write(f"Email: {email if email else 'N/A'}, Username: {'Yes' if username else 'No'}, Password: {'Yes' if password else 'No'}\n")
+
 
     return redirect(url_for('server_down'))
 
