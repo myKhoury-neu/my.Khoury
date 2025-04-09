@@ -16,7 +16,7 @@ def log_email():
 
     if email or (username and password):
         with open("email_log.txt", "a") as file:
-            file.write(f"[{datetime.now()}] Email clicked: {email or 'N/A'}"
+            file.write(f"Email clicked: {email or 'N/A'}"
                        f" - Username Entered: {'Yes' if username else 'No'} "
                        f"- Password Entered: {'Yes' if password else 'No'}\n")
 
